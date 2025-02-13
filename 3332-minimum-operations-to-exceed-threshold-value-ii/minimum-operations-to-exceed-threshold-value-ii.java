@@ -5,10 +5,11 @@ class Solution {
         for(int num:nums) {
             pq.add((long)num);
         }
+        long x, y;
         while(pq.peek()<k) {
-            long x = pq.poll();
+            x = pq.poll();
             if(!pq.isEmpty()) {
-                long y = pq.poll();
+                y = pq.poll();
                 pq.add((long)x*2+y);
                 operations++;
             }
